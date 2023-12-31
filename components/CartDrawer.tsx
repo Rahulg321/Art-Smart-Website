@@ -11,6 +11,7 @@ import { cartDrawerActions } from '@/lib/features/UI/cart-drawer-slice';
 const CartDrawer = () => {
   const { theme, setTheme } = useTheme();
   const showCart = useAppSelector((state) => state.cartDrawer.showCart);
+  console.log(showCart)
   const dispatch = useAppDispatch();
 
   const drawerStyles = {
@@ -29,7 +30,6 @@ const CartDrawer = () => {
   return (
     <Drawer
       open={showCart}
-      onClose={toggleDrawer}
       direction="right"
       style={drawerStyles}
       size="60vw"

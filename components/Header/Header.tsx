@@ -70,7 +70,7 @@ export default function Header() {
                   : 'foreground'
               }
               className="w-full"
-              href="#"
+              href={`/${item}`}
             >
               {item}
             </Link>

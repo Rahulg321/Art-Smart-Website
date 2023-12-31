@@ -26,9 +26,9 @@ export default function RootLayout({
       <body className="antialiased">
         <Providers>
           <StoreProvider>
-            <CartDrawer/>
             <div className="parent-container">
               <Header />
+            <CartDrawer/>
               {children}
               <Footer />
             </div>

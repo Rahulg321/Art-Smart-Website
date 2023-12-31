@@ -8,14 +8,14 @@ export default function CartBadge() {
   const showCart = useAppSelector((state) => state.cartDrawer.showCart);
   const dispatch = useAppDispatch();
   const cartClickHandler = () => {
-    console.log(showCart);
+    console.log("you have toggled the cart", showCart);
     dispatch(cartDrawerActions.toggleCart());
   };
   return (
-    <Button onPress={cartClickHandler}>
+    <button onClick={cartClickHandler}>
       <Badge content="5" color="primary">
         <FaShoppingCart size="30" />
       </Badge>
-    </Button>
+    </button>
   );
 }
